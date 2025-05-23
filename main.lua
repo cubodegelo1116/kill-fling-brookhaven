@@ -240,3 +240,102 @@ task.spawn(function()
         end
     end
 end)
+
+-- 🌟 Botão de Acesso Rápido
+local openMenuButton = Instance.new("TextButton")
+openMenuButton.Size = UDim2.new(0, 100, 0, 30)
+openMenuButton.Position = UDim2.new(0, 10, 0, 10) -- canto superior esquerdo
+openMenuButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+openMenuButton.TextColor3 = Color3.new(1, 1, 1)
+openMenuButton.Font = Enum.Font.GothamBold
+openMenuButton.TextSize = 14
+openMenuButton.Text = "🚀 Abrir Menu"
+openMenuButton.Parent = gui
+
+-- 🌟 Menu de Escolhas
+local choiceFrame = Instance.new("Frame")
+choiceFrame.Size = UDim2.new(0, 160, 0, 80)
+choiceFrame.Position = UDim2.new(0, 10, 0, 50)
+choiceFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+choiceFrame.BorderSizePixel = 0
+choiceFrame.Visible = false
+choiceFrame.Parent = gui
+
+-- Botão MI GUI
+local miGuiButton = Instance.new("TextButton")
+miGuiButton.Size = UDim2.new(1, -10, 0, 30)
+miGuiButton.Position = UDim2.new(0, 5, 0, 5)
+miGuiButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+miGuiButton.Text = "💻 MI GUI"
+miGuiButton.TextColor3 = Color3.new(1, 1, 1)
+miGuiButton.Font = Enum.Font.GothamBold
+miGuiButton.TextSize = 14
+miGuiButton.Parent = choiceFrame
+
+-- Botão MI BACKDOOR
+local miBackdoorButton = Instance.new("TextButton")
+miBackdoorButton.Size = UDim2.new(1, -10, 0, 30)
+miBackdoorButton.Position = UDim2.new(0, 5, 0, 40)
+miBackdoorButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+miBackdoorButton.Text = "🛠 MI BACKDOOR"
+miBackdoorButton.TextColor3 = Color3.new(1, 1, 1)
+miBackdoorButton.Font = Enum.Font.GothamBold
+miBackdoorButton.TextSize = 14
+miBackdoorButton.Parent = choiceFrame
+
+-- 🌟 Botão de Acesso Rápido
+local openMenuButton = Instance.new("TextButton")
+openMenuButton.Size = UDim2.new(0, 100, 0, 30)
+openMenuButton.Position = UDim2.new(0, 10, 0, 10) -- canto superior esquerdo
+openMenuButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+openMenuButton.TextColor3 = Color3.new(1, 1, 1)
+openMenuButton.Font = Enum.Font.GothamBold
+openMenuButton.TextSize = 14
+openMenuButton.Text = "🚀 Abrir Menu"
+openMenuButton.Parent = gui
+
+-- 🌟 Menu de Escolhas
+local choiceFrame = Instance.new("Frame")
+choiceFrame.Size = UDim2.new(0, 160, 0, 80)
+choiceFrame.Position = UDim2.new(0, 10, 0, 50)
+choiceFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+choiceFrame.BorderSizePixel = 0
+choiceFrame.Visible = false
+choiceFrame.Parent = gui
+
+-- Botão MI GUI
+local miGuiButton = Instance.new("TextButton")
+miGuiButton.Size = UDim2.new(1, -10, 0, 30)
+miGuiButton.Position = UDim2.new(0, 5, 0, 5)
+miGuiButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+miGuiButton.Text = "💻 MI GUI"
+miGuiButton.TextColor3 = Color3.new(1, 1, 1)
+miGuiButton.Font = Enum.Font.GothamBold
+miGuiButton.TextSize = 14
+miGuiButton.Parent = choiceFrame
+
+-- Botão MI BACKDOOR
+local miBackdoorButton = Instance.new("TextButton")
+miBackdoorButton.Size = UDim2.new(1, -10, 0, 30)
+miBackdoorButton.Position = UDim2.new(0, 5, 0, 40)
+miBackdoorButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+miBackdoorButton.Text = "🛠 MI BACKDOOR"
+miBackdoorButton.TextColor3 = Color3.new(1, 1, 1)
+miBackdoorButton.Font = Enum.Font.GothamBold
+miBackdoorButton.TextSize = 14
+miBackdoorButton.Parent = choiceFrame
+
+-- 🌟 Ações dos botões
+openMenuButton.MouseButton1Click:Connect(function()
+    choiceFrame.Visible = not choiceFrame.Visible
+end)
+
+miGuiButton.MouseButton1Click:Connect(function()
+    choiceFrame.Visible = false
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cubodegelo1116/MI-GUI/refs/heads/main/mi%20gui"))()
+end)
+
+miBackdoorButton.MouseButton1Click:Connect(function()
+    choiceFrame.Visible = false
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cubodegelo1116/mi-hub-backdoor/refs/heads/main/MI%20BACKDOOR"))()
+end)
